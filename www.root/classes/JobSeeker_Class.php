@@ -20,7 +20,7 @@ class JobSeeker_ extends functions_ implements JobSeekerInterface
   {
   }
 
-  public function SignUp(dbConnection_ $dbConnection_, $newjobseekeremail, $newjobseekerpassword){
+  public function SignUp(dbConnection_ $dbConnection_, $newjobseekeremail, $newjobseekerpassword, $newjobseekerzipcode){
     $adminConnect = $dbConnection_->adminConnect();
     $db = $adminConnect->justhourly_qa_db;
     $col = $db->JobSeekersProfileInfo_Col;
@@ -33,11 +33,40 @@ class JobSeeker_ extends functions_ implements JobSeekerInterface
         "UserIdentity" => "", //$identity,
         "Email" => $newjobseekeremail
       ],
-      "roles" => 
+      "roles" =>
       [
           ["role" => 'JustHourlyJobSeeker', "db" => 'justhourly_qa_db']
       ]
     );
+
+
+    $userProfileDocument = array(
+      "PersonalInfo" => array(
+        "Name" => array(
+          "FirstName" => "",
+          "LastName" => ""
+        ),
+        "ContactInfo" => array(
+          "PhoneNumber" => "",
+          "Email" => $newjobseekeremail,
+          "Address" => array(
+            "Street" => "",
+            "City" => "",
+            "State" => "",
+            "ZipCode" => $newjobseekerzipcode
+          ),
+          "DOB" => array(
+            "d" => "",
+            "m" => "",
+            "y" => ""
+          )
+        ),
+      ),
+      "AccountInfo" => array(
+
+      ),
+
+    )
 
     echo("<br><br>");
 
