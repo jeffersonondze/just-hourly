@@ -63,31 +63,6 @@ class JobSeeker_ extends functions_ implements JobSeekerInterface
         ),
       ),
       "AccountInfo" => array(
-               "UserIdentity" => "",
-        "JobSeekerProfiles" => array(
-                 "JobSeekerProfileIdentity" => "",
-                 "JobSeekerProfileIdustry" => "",
-                 "JobSeekerPrifleCreatedDate" => array (
-                          "d" => "",
-                          "m" => "",
-                          "y" => "",
-          )
-         )
-      ),
-       "Applications" => array(
-                "ApplicationIdentity" => "",
-                "ApplicationIndustry" => "",
-                "ApplicationJobIdentity" => "",
-                
-                "ApplicationDate" => array(
-                          "d" => "",
-                          "m" => "",
-                          "y" => ""
-      )
-     )
-    ),
-           "JobSeekerSavedJobs" => "",
-           "Recommendations" => "",
     )
              
 )
