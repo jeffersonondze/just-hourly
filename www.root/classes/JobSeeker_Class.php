@@ -42,30 +42,58 @@ class JobSeeker_ extends functions_ implements JobSeekerInterface
 
     $userProfileDocument = array(
       "PersonalInfo" => array(
-        "Name" => array(
-          "FirstName" => "",
-          "LastName" => ""
-        ),
-        "ContactInfo" => array(
-          "PhoneNumber" => "",
-          "Email" => $newjobseekeremail,
-          "Address" => array(
-            "Street" => "",
-            "City" => "",
-            "State" => "",
-            "ZipCode" => $newjobseekerzipcode
-          ),
-          "DOB" => array(
+       "Name" => array(
+       "FirstName" => "",
+       "LastName" => ""
+        )
+       "ContactInfo" => array(
+       "PhoneNumber" => "",
+       "Email" => $newjobseekeremail,
+       "Address" => array(
+        "Street" => "",
+        "City" => "",
+        "State" => "",
+        "ZipCode" => $newjobseekerzipcode
+          )
+                
+        "DOB" => array(
             "d" => "",
             "m" => "",
-            "y" => ""
-          )
-        ),
-      ),
+            "y" => "",
+         )
+       )
+     )
       "AccountInfo" => array(
+      "UserIdentity" => "",
+ -    "JobSeekerProfiles" => array(
+      array (
+ -    "JobSeekerProfileIdentity" => "",
+ -    "JobSeekerProfileIdustry" => "",
+ -    "JobSeekerPrifleCreatedDate" => array (
+ -          "d" => "",
+ -          "m" => "",
+ -          "y" => "",
+ -         )
+ -       )
+ -     )
+ -      "Applications" => array(
+ -      "ApplicationIdentity" => "",
+ -      "ApplicationIndustry" => "",
+ -      "ApplicationJobIdentity" => "",
+ - 
+ -      "ApplicationDate" => array(
+ -           "d" => "",
+ -           "m" => "",
+ -           "y" => "",
+ -      )
+ -     )
+ -    )
+ -         "JobSeekerSavedJobs" => "",
+ -         "Recommendations" => "",
+      
     )
              
-)
+);
 
     echo("<br><br>");
 
